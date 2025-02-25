@@ -2,20 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ====== Global Root Variabel ====== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 255, 255, 255; /* Light mode (Putih) */
+  --foreground: 0, 0, 0; /* Warna teks hitam */
+
+  --primary: 59, 130, 246; /* Warna utama (Biru) */
+  --secondary: 245, 158, 11; /* Warna sekunder (Kuning Emas) */
+  --muted: 209, 213, 219; /* Warna abu-abu muda */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: 17, 24, 39; /* Dark mode (Abu gelap) */
+  --foreground: 229, 231, 235; /* Warna teks putih */
+
+  --primary: 147, 197, 253; /* Warna utama (Biru Muda) */
+  --secondary: 252, 211, 77; /* Warna sekunder (Kuning Muda) */
+  --muted: 75, 85, 99; /* Warna abu-abu gelap */
 }
 
+/* ====== Body Styling ====== */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))];
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ====== Typography ====== */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+/* ====== Custom Button Style ====== */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all;
+}
+
+.btn-primary {
+  @apply bg-[rgb(var(--primary))] text-white hover:opacity-80;
+}
+
+.btn-secondary {
+  @apply bg-[rgb(var(--secondary))] text-black hover:opacity-80;
+}
+
+.btn-outline {
+  @apply border border-[rgb(var(--foreground))] text-[rgb(var(--foreground))] hover:bg-[rgb(var(--foreground))] hover:text-[rgb(var(--background))];
+}
+
+/* ====== Custom Card Style ====== */
+.card {
+  @apply bg-[rgb(var(--muted))] p-4 rounded-xl shadow-md;
+}
+
+.dark .card {
+  @apply bg-gray-800 text-gray-100;
+}
+
+/* ====== Link Styling ====== */
+a {
+  @apply text-[rgb(var(--primary))] hover:underline;
+}
+
+/* ====== Animasi Transisi Mode Gelap ====== */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

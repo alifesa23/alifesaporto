@@ -1,18 +1,25 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
+  darkMode: "class", // Mengaktifkan dark mode berbasis class
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "rgb(var(--background))",
+        foreground: "rgb(var(--foreground))",
+      },
+      transitionProperty: {
+        "background-color": "background-color",
+        "color": "color",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
