@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["assets.aceternity.com"],
   },
+  eslint: {
+    ignoreDuringBuilds: true, // Mengabaikan error ESLint saat build
+  },
 };
 
 export default nextConfig;

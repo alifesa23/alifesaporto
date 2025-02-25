@@ -51,8 +51,10 @@ const Hero = () => {
   return (
 <div id="home" className="w-full min-h-screen relative flex flex-col lg:flex-row justify-center items-center lg:items-start overflow-hidden">
 <BackgroundBeamsWithCollision className="absolute inset-0 w-full min-h-full z-0 overflow-hidden">
-  {/* Tambahkan konten di sini jika diperlukan */}
+  {/* Bisa dikosongkan, atau tambahkan elemen seperti div */}
+  <div></div>
 </BackgroundBeamsWithCollision>
+
 
       {/* ✅ Navbar Floating */}
       <Navbar />
