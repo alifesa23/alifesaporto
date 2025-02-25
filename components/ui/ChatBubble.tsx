@@ -13,7 +13,7 @@ interface ChatBubbleProps {
 const ChatBubble: React.FC<ChatBubbleProps> = ({ isChatOpen, setIsChatOpen }) => {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState<{ role: string; content: string }[]>([
-    { role: "assistant", content: "👋 Hi! I'm Esa's AI Assistant. How can I help you today?" },
+    { role: "assistant", content: "👋 Hi! I`&apos;m Esa`&apos;s AI Assistant. How can I help you today?" },
   ]);
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement | null>(null);
@@ -71,7 +71,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ isChatOpen, setIsChatOpen }) =>
       {isChatOpen && (
         <div className="fixed bottom-20 right-6 w-80 bg-gray-900 text-white rounded-lg shadow-lg border border-gray-700">
           <div className="bg-blue-500 p-3 flex justify-between items-center rounded-t-lg">
-            <span className="text-white font-semibold">Chat with Esa's AI Assistant</span>
+            <span className="text-white font-semibold">Chat with Esa`&apos;s AI Assistant</span>
             <button onClick={() => setIsChatOpen(false)} className="text-white hover:opacity-80">
               <X className="w-5 h-5" />
             </button>

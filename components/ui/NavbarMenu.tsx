@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -17,6 +18,7 @@ export const MenuItem = ({
   setActive,
   active,
   item,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   children,
 }: {
   setActive: (item: string) => void;
@@ -96,6 +98,7 @@ export const ProductItem = ({
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link

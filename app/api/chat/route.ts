@@ -63,7 +63,8 @@ export async function POST(req: Request) {
       if (!process.env.GEMINI_API_KEY) {
         throw new Error("GEMINI_API_KEY is not configured");
       }
-  
+      
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { message, isFirstMessage, sessionId = Date.now().toString() } = await req.json();
   
       if (!message) {

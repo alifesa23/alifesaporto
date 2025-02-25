@@ -5,6 +5,7 @@ import { ArrowUp } from "lucide-react";
 
 
 const ScrollToTop = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isVisible, setIsVisible] = useState(false);
 
   // Cek posisi scroll

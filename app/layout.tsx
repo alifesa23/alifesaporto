@@ -4,8 +4,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
