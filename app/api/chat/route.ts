@@ -37,7 +37,7 @@ Organization:
    - Developer working on Solana blockchain projects
    - Built various trading and tracking tools
 
-Connect with Naufal:
+Connect with Esa:
 - LinkedIn: linkedin.com/alifesa23/
 - GitHub: github.com/alifesa23
 - Instagram: @alif.esa
