@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const CV_URL = "https://naufaljct48.github.io/public/Resume.pdf";
+const CV_URL = "https://alifesa23.github.io/public/Resume.pdf";
 
 const BASE_PROMPT = `You are Esa's AI Assistant for his portfolio website. Here's what you need to know about Esa:
 
